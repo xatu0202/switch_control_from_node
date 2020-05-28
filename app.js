@@ -5,7 +5,7 @@ import {
 } from './controls.js'
 const SerialPort = require('serialport');
 const fs = require('fs');
-/*
+
 const gamepadButtonComponent = {
     props: ['label', 'value', 'controls'],
     data: function () {
@@ -21,7 +21,7 @@ const gamepadButtonComponent = {
         }
     },
     template: `<div><input type="checkbox" v-model="checked" v-on:change="handleKey(value, checked)">{{label}}</input></div>`
-}*/
+}
 const bvm = new Vue({
     el: '#buttons',
     data: {
@@ -32,11 +32,10 @@ const bvm = new Vue({
         log: function (d) {
             console.log(d);
         }
+    },
+    components: {
+        'gamepad-button': gamepadButtonComponent
     }
-    /*,
-        components: {
-            'gamepad-button': gamepadButtonComponent
-        }*/
 })
 const dvm = new Vue({
     el: '#devconnect',
