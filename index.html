@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <title>Switch Control</title>
     <script src="vue.js"></script>
-    <sctipr src="controls.js"></sctipr>
-    <script defer type="module" src="app.js"></script>
 </head>
 
 <body>
@@ -21,11 +19,13 @@
         <button v-on:click="connectDevice">接続</button><br>
     </div>
     <div id="buttons">
-        <gamepad-button :controls="controls" label="A" value=3></gamepad-button>
-        <gamepad-button :controls="controls" label="B" value=2></gamepad-button>
-        <gamepad-button :controls="controls" label="X" value=4></gamepad-button>
-        <gamepad-button :controls="controls" label="Y" value=1></gamepad-button>
+        <gamepad-button :controls="controls" label="A" value="3"></gamepad-button>
+        <gamepad-button :controls="controls" label="B" value="2"></gamepad-button>
+        <gamepad-button :controls="controls" label="X" value="4"></gamepad-button>
+        <gamepad-button :controls="controls" label="Y" value="1"></gamepad-button>
     </div>
+
+    <script defer type="module" src="./app.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,6 @@ const gamepadButtonComponent = {
     },
     methods: {
         handleKey: function (btn, checked) {
-            console.log(btn)
             if (checked) this.controls.pushButton(btn);
             else this.controls.releaseButton(btn);
         }
@@ -25,8 +24,7 @@ const gamepadButtonComponent = {
 const bvm = new Vue({
     el: '#buttons',
     data: {
-        controls: null,
-        test: "ok"
+        controls: null
     },
     methods: {
         log: function (d) {
@@ -61,8 +59,5 @@ const dvm = new Vue({
         }
     }
 });
-
-
-
 
 dvm.updateOptions();
