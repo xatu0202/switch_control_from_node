@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Switch Control</title>
+    <script src="vue.js"></script>
+    <sctipr src="controls.js"></sctipr>
+    <script defer type="module" src="app.js"></script>
+</head>
+
+<body>
+    <div id="devconnect">
+        <select v-model="selected">
+            <option v-for="option in options" :key="option">
+                {{ option}}
+            </option>
+        </select>
+        <button v-on:click="updateOptions">更新</button><br>
+        <span v-if=selected>path: {{ selected }}</span>
+        <button v-on:click="connectDevice">接続</button><br>
+    </div>
+    <div id="buttons">
+        <gamepad-button :controls="controls" label="A" value=3></gamepad-button>
+        <gamepad-button :controls="controls" label="B" value=2></gamepad-button>
+        <gamepad-button :controls="controls" label="X" value=4></gamepad-button>
+        <gamepad-button :controls="controls" label="Y" value=1></gamepad-button>
+    </div>
+</body>
+
+</html>
